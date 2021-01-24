@@ -15,6 +15,10 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+
+  @media (max-height: $landscape-bp) {
+    height: 100vh;
+  }
 }
 
 .intro__inner {
