@@ -123,3 +123,21 @@
     max-height: 200px;
   }
 }
+
+.catalog__btn {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (max-width: $small-desktop-bp) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $tablet-bp) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $mobile-bp) {
+    font-size: 12px;
+  }
+}
