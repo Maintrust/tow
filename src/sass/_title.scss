@@ -1,0 +1,17 @@
+.title {
+  font-size: 36px;
+  color: $dark-text;
+
+  text-align: center;
+  margin-bottom: 50px;
+
+  @media (max-width: $small-desktop-bp) {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-bp) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}

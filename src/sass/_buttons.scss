@@ -1,0 +1,16 @@
+.btn {
+  border: none;
+  outline: none;
+
+  background: $primary;
+  border-radius: 100px;
+  padding: 14px 24px;
+
+  color: $light-text;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color: $primary, $amount: 5%);
+  }
+}

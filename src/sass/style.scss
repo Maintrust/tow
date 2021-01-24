@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@import "_reset";
+@import "_vars";
+@import "_breakpoints";
+@import "_container";
+@import "_title";
+@import "_buttons";
+
+@import "blocks/_section";
+@import "blocks/_header";
+@import "blocks/_nav";
+@import "blocks/_intro";
+@import "blocks/_catalog";
+@import "blocks/_accordion";
+@import "blocks/_footer";

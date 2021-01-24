@@ -1,0 +1,57 @@
+.intro {
+  height: 70vh;
+  background: url("../../../assets/images/intro-bg.png") center no-repeat;
+  background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intro__inner {
+  text-align: center;
+}
+
+.intro__title {
+  max-width: 518px;
+  margin: 0 auto;
+
+  color: $light-text;
+  font-size: 54px;
+  font-weight: 700;
+
+  -webkit-text-stroke: 2px rgba($color: $dark-text, $alpha: 0.5);
+
+  margin-bottom: 50px;
+
+  @media (max-width: $medium-desktop-bp) {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-bp), (max-height: $landscape-bp) {
+    font-size: 26px;
+    max-width: 250px;
+  }
+}
+
+.intro__btn {
+  font-size: 26px;
+  font-weight: 700;
+
+  padding: 14px 112px;
+
+  @media (max-width: $medium-desktop-bp) {
+    font-size: 18px;
+    padding: 10px 70px;
+  }
+}

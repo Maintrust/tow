@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (max-width: $medium-desktop-bp) {
+    max-width: $small-desktop-bp;
+  }
+
+  @media (max-width: $small-desktop-bp) {
+    max-width: $tablet-bp;
+  }
+
+  @media (max-width: $tablet-bp) {
+    max-width: $mobile-bp;
+  }
+
+  &--header,
+  &--footer {
+    max-width: $medium-desktop-bp;
+  }
+}

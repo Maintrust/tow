@@ -1,0 +1,141 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  padding: 0 10px;
+
+  @media (max-width: $tablet-bp), (max-height: $landscape-bp) {
+    display: none;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: $primary;
+    padding: 30px 20px;
+    top: 60px;
+    right: 0;
+  }
+
+  &.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.nav__item {
+  @media (max-width: $tablet-bp), (max-height: $landscape-bp) {
+    padding: 20px 20px;
+  }
+}
+
+.nav__link {
+  display: block;
+
+  font-weight: 700;
+
+  padding: 0 50px;
+  margin: 0 -1px;
+
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+
+  // transition: border-color 0.1s linear;
+
+  @media (max-width: $small-desktop-bp) {
+    padding: 0 25px;
+  }
+
+  &:hover {
+    border-color: $light-text;
+  }
+}
+
+.nav-toggle {
+  position: relative;
+  z-index: 1;
+
+  font-size: 0;
+  color: transparent;
+  border: 0;
+  background: none;
+  outline: none;
+
+  cursor: pointer;
+
+  width: 30px;
+  padding: 10px 0;
+
+  display: none;
+
+  @media (max-width: $tablet-bp), (max-height: $landscape-bp) {
+    display: block;
+  }
+
+  &.active {
+    .nav-toggle__item {
+      background-color: transparent;
+      &::before {
+        -webkit-transform: rotate(45deg) translate(5px, 6px);
+        -ms-transform: rotate(45deg) translate(5px, 6px);
+        transform: rotate(45deg) translate(5px, 6px);
+      }
+      &::after {
+        -webkit-transform: rotate(-45deg) translate(5px, -6px);
+        -ms-transform: rotate(-45deg) translate(5px, -6px);
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
+    }
+  }
+}
+
+.nav-toggle__item {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: auto;
+  background-color: $light-text;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  -webkit-transition: background-color 0.1s linear;
+
+  -o-transition: background-color 0.1s linear;
+
+  transition: background-color 0.1s linear;
+
+  &::before {
+    top: -8px;
+  }
+
+  &::after {
+    bottom: -8px;
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 3px;
+    background-color: $light-text;
+    -webkit-transition: -webkit-transform 0.1s linear;
+    transition: -webkit-transform 0.1s linear;
+    -o-transition: transform 0.1s linear;
+    transition: transform 0.1s linear;
+    transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+  }
+}
