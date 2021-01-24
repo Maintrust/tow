@@ -1,6 +1,6 @@
 .intro {
   height: 70vh;
-  background: url("../../../assets/images/intro-bg.png") center no-repeat;
+  background: url("../images/intro-bg.png") center no-repeat;
   background-size: cover;
 
   display: -webkit-box;
@@ -10,11 +10,11 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .intro__inner {
